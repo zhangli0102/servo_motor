@@ -1,0 +1,6 @@
+NET "CLK" LOC = D9;
+
+NET "switch_up" LOC = "K17" | PULLUP;
+NET "switch_dn" LOC = "M18" | PULLUP;
+
+NET "CONTROL_PIN" LOC = U7;

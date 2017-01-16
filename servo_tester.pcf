@@ -1,0 +1,11 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Jan 15 21:39:33 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "switch_dn" LOCATE = SITE "M18" LEVEL 1;
+COMP "switch_up" LOCATE = SITE "K17" LEVEL 1;
+COMP "CONTROL_PIN" LOCATE = SITE "U7" LEVEL 1;
+COMP "CLK" LOCATE = SITE "D9" LEVEL 1;
+SCHEMATIC END;
+

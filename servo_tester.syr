@@ -1,0 +1,479 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: servo_tester.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "servo_tester.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "servo_tester"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-csg324
+
+---- Source Options
+Top Module Name                    : servo_tester
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/zhangli/src/fpga/servo_tester/src/servo.v" into library work
+Parsing module <servo>.
+Analyzing Verilog file "/home/zhangli/src/fpga/servo_tester/src/debouncer.v" into library work
+Parsing module <debouncer>.
+Analyzing Verilog file "/home/zhangli/src/fpga/servo_tester/src/servo_tester.v" into library work
+Parsing module <servo_tester>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/home/zhangli/src/fpga/servo_tester/src/servo_tester.v" Line 29: Port state is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/zhangli/src/fpga/servo_tester/src/servo_tester.v" Line 30: Port state is not connected to this instance
+
+Elaborating module <servo_tester>.
+
+Elaborating module <debouncer>.
+
+Elaborating module <servo(CLK_F=12)>.
+WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/servo_tester/src/servo.v" Line 34: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/servo_tester/src/servo.v" Line 38: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/servo_tester/src/servo_tester.v" Line 40: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/servo_tester/src/servo_tester.v" Line 44: Result of 32-bit expression is truncated to fit in 16-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <servo_tester>.
+    Related source file is "/home/zhangli/src/fpga/servo_tester/src/servo_tester.v".
+INFO:Xst:3210 - "/home/zhangli/src/fpga/servo_tester/src/servo_tester.v" line 29: Output port <state> of the instance <d1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/zhangli/src/fpga/servo_tester/src/servo_tester.v" line 29: Output port <trans_dn> of the instance <d1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/zhangli/src/fpga/servo_tester/src/servo_tester.v" line 30: Output port <state> of the instance <d2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/zhangli/src/fpga/servo_tester/src/servo_tester.v" line 30: Output port <trans_dn> of the instance <d2> is unconnected or connected to loadless signal.
+    Found 16-bit register for signal <pulse_len>.
+    Found 16-bit adder for signal <pulse_len[15]_GND_1_o_add_1_OUT> created at line 40.
+    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_4_OUT<15:0>> created at line 44.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+Unit <servo_tester> synthesized.
+
+Synthesizing Unit <debouncer>.
+    Related source file is "/home/zhangli/src/fpga/servo_tester/src/debouncer.v".
+    Found 1-bit register for signal <sync_1>.
+    Found 17-bit register for signal <count>.
+    Found 1-bit register for signal <state>.
+    Found 1-bit register for signal <sync_0>.
+    Found 17-bit adder for signal <count[16]_GND_2_o_add_5_OUT> created at line 52.
+    Found 1-bit comparator equal for signal <idle> created at line 41
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <debouncer> synthesized.
+
+Synthesizing Unit <servo>.
+    Related source file is "/home/zhangli/src/fpga/servo_tester/src/servo.v".
+        CLK_F = 12
+    Found 16-bit register for signal <count>.
+    Found 1-bit register for signal <CONTROL_PIN>.
+    Found 16-bit register for signal <prescaler>.
+    Found 16-bit adder for signal <prescaler[15]_GND_3_o_add_1_OUT> created at line 34.
+    Found 16-bit adder for signal <count[15]_GND_3_o_add_3_OUT> created at line 38.
+    Found 16-bit comparator greater for signal <count[15]_pulse_len[15]_LessThan_5_o> created at line 39
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <servo> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 2
+ 16-bit addsub                                         : 1
+ 17-bit adder                                          : 2
+# Registers                                            : 12
+ 1-bit register                                        : 7
+ 16-bit register                                       : 3
+ 17-bit register                                       : 2
+# Comparators                                          : 3
+ 1-bit comparator equal                                : 2
+ 16-bit comparator greater                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <debouncer>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <debouncer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <servo>.
+The following registers are absorbed into counter <prescaler>: 1 register on signal <prescaler>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <servo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <servo_tester>.
+The following registers are absorbed into accumulator <pulse_len>: 1 register on signal <pulse_len>.
+Unit <servo_tester> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 4
+ 16-bit up counter                                     : 2
+ 17-bit up counter                                     : 2
+# Accumulators                                         : 1
+ 16-bit updown accumulator                             : 1
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+# Comparators                                          : 3
+ 1-bit comparator equal                                : 2
+ 16-bit comparator greater                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <servo_tester> ...
+
+Optimizing unit <debouncer> ...
+WARNING:Xst:1710 - FF/Latch <p/prescaler_4> (without init value) has a constant value of 0 in block <servo_tester>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <p/prescaler_5> (without init value) has a constant value of 0 in block <servo_tester>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <p/prescaler_6> (without init value) has a constant value of 0 in block <servo_tester>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <p/prescaler_7> (without init value) has a constant value of 0 in block <servo_tester>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <p/prescaler_8> (without init value) has a constant value of 0 in block <servo_tester>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <p/prescaler_9> (without init value) has a constant value of 0 in block <servo_tester>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <p/prescaler_10> (without init value) has a constant value of 0 in block <servo_tester>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <p/prescaler_11> (without init value) has a constant value of 0 in block <servo_tester>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <p/prescaler_12> (without init value) has a constant value of 0 in block <servo_tester>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <p/prescaler_13> (without init value) has a constant value of 0 in block <servo_tester>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <p/prescaler_14> (without init value) has a constant value of 0 in block <servo_tester>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <p/prescaler_15> (without init value) has a constant value of 0 in block <servo_tester>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pulse_len_0> has a constant value of 0 in block <servo_tester>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pulse_len_1> has a constant value of 0 in block <servo_tester>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block servo_tester, actual ratio is 2.
+
+Final Macro Processing ...
+
+Processing Unit <servo_tester> :
+	Found 2-bit shift register for signal <d2/sync_1>.
+	Found 2-bit shift register for signal <d1/sync_1>.
+Unit <servo_tester> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 71
+ Flip-Flops                                            : 71
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : servo_tester.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 253
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 50
+#      LUT2                        : 5
+#      LUT3                        : 4
+#      LUT4                        : 18
+#      LUT5                        : 6
+#      LUT6                        : 21
+#      MUXCY                       : 75
+#      VCC                         : 1
+#      XORCY                       : 68
+# FlipFlops/Latches                : 73
+#      FD                          : 3
+#      FDE                         : 16
+#      FDR                         : 38
+#      FDRE                        : 16
+# Shift Registers                  : 2
+#      SRLC16E                     : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 3
+#      IBUF                        : 2
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              73  out of  11440     0%  
+ Number of Slice LUTs:                  110  out of   5720     1%  
+    Number used as Logic:               108  out of   5720     1%  
+    Number used as Memory:                2  out of   1440     0%  
+       Number used as SRL:                2
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    111
+   Number with an unused Flip Flop:      38  out of    111    34%  
+   Number with an unused LUT:             1  out of    111     0%  
+   Number of fully used LUT-FF pairs:    72  out of    111    64%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                           4
+ Number of bonded IOBs:                   4  out of    200     2%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 75    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.076ns (Maximum Frequency: 196.990MHz)
+   Minimum input arrival time before clock: 1.801ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 5.076ns (frequency: 196.990MHz)
+  Total number of paths / destination ports: 4550 / 157
+-------------------------------------------------------------------------
+Delay:               5.076ns (Levels of Logic = 3)
+  Source:            d2/count_1 (FF)
+  Destination:       pulse_len_2 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: d2/count_1 to pulse_len_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.864  d2/count_1 (d2/count_1)
+     LUT4:I0->O           17   0.203   1.256  d2/out2 (d2/out1)
+     LUT5:I2->O            2   0.205   0.617  d2/out4 (d2/finished)
+     LUT6:I5->O           14   0.205   0.957  _n0016_inv1 (_n0016_inv)
+     FDE:CE                    0.322          pulse_len_2
+    ----------------------------------------
+    Total                      5.076ns (1.382ns logic, 3.694ns route)
+                                       (27.2% logic, 72.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.801ns (Levels of Logic = 1)
+  Source:            switch_dn (PAD)
+  Destination:       d2/Mshreg_sync_1 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: switch_dn to d2/Mshreg_sync_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  switch_dn_IBUF (switch_dn_IBUF)
+     SRLC16E:D                -0.060          d2/Mshreg_sync_1
+    ----------------------------------------
+    Total                      1.801ns (1.222ns logic, 0.579ns route)
+                                       (67.9% logic, 32.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            p/CONTROL_PIN (FF)
+  Destination:       CONTROL_PIN (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: p/CONTROL_PIN to CONTROL_PIN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  p/CONTROL_PIN (p/CONTROL_PIN)
+     OBUF:I->O                 2.571          CONTROL_PIN_OBUF (CONTROL_PIN)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    5.076|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.62 secs
+ 
+--> 
+
+
+Total memory usage is 388040 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   20 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

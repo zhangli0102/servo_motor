@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/zhangli/src/fpga/servo_tester/servo_tester.ncd
+OUTFILE=/home/zhangli/src/fpga/servo_tester/servo_tester.bit
+FAMILY=Spartan6
+PART=xc6slx9-3csg324
+WORKINGDIR=/home/zhangli/src/fpga/servo_tester
+LICENSE=WebPack
+USER_INFO=211280914_0_0_371

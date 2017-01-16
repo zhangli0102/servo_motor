@@ -1,0 +1,3 @@
+verilog work "src/servo.v"
+verilog work "src/debouncer.v"
+verilog work "src/servo_tester.v"
