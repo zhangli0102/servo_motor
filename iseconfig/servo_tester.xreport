@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-01-15T21:29:02</DateModified>
+  <DateModified>2017-03-02T18:20:34</DateModified>
   <ModuleName>servo_tester</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/zhangli/src/fpga/servo_tester/iseconfig/servo_tester.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/zhangli/src/fpga/servo_tester</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/zhangli/src/fpga/servo_tester/</ImplementationReportsDirectory>
   <DateInitialized>2017-01-15T21:29:02</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

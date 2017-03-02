@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-za::  Sun Jan 15 21:39:36 2017
+za::  Thu Mar 02 18:39:30 2017
 
 par -w -intstyle ise -ol high -mt off servo_tester_map.ncd servo_tester.ncd
 servo_tester.pcf 
@@ -109,9 +109,9 @@ Phase  1  : 423 unrouted;      REAL time: 3 secs
 
 Phase  2  : 323 unrouted;      REAL time: 3 secs 
 
-Phase  3  : 92 unrouted;      REAL time: 3 secs 
+Phase  3  : 69 unrouted;      REAL time: 3 secs 
 
-Phase  4  : 92 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+Phase  4  : 69 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
 Updating file: servo_tester.ncd with current fully routed design.
 
@@ -147,8 +147,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net CLK | SETUP       |         N/A|     4.296ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.468ns|            |       0|           0
+  Autotimespec constraint for clock net CLK | SETUP       |         N/A|     3.838ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.464ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -164,7 +164,7 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 4 secs 
+Total REAL time to PAR completion: 5 secs 
 Total CPU time to PAR completion: 4 secs 
 
 Peak Memory Usage:  606 MB

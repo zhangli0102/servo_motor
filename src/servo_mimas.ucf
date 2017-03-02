@@ -1,4 +1,4 @@
-NET "CLK" LOC = D9;
+NET "CLK" LOC = v10;
 
 NET "switch_up" LOC = "K17" | PULLUP;
 NET "switch_dn" LOC = "M18" | PULLUP;

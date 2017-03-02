@@ -5,3 +5,9 @@ map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -reg
 par -w -intstyle ise -ol high -mt off servo_tester_map.ncd servo_tester.ncd servo_tester.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml servo_tester.twx servo_tester.ncd -o servo_tester.twr servo_tester.pcf 
 bitgen -intstyle ise -f servo_tester.ut servo_tester.ncd 
+xst -intstyle ise -ifn "/home/zhangli/src/fpga/servo_tester/servo_tester.xst" -ofn "/home/zhangli/src/fpga/servo_tester/servo_tester.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc src/servo_mimas.ucf -p xc6slx9-csg324-3 servo_tester.ngc servo_tester.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o servo_tester_map.ncd servo_tester.ngd servo_tester.pcf 
+par -w -intstyle ise -ol high -mt off servo_tester_map.ncd servo_tester.ncd servo_tester.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml servo_tester.twx servo_tester.ncd -o servo_tester.twr servo_tester.pcf 
+bitgen -intstyle ise -f servo_tester.ut servo_tester.ncd 

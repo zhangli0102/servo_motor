@@ -24,7 +24,7 @@ module servo(
     output reg CONTROL_PIN
     );
 
-parameter CLK_F = 50;
+parameter CLK_F = 100;
 
 reg [15:0] prescaler;
 reg [15:0] count = 0;

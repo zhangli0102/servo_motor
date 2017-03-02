@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Jan 15 21:39:40 2017
+Thu Mar  2 18:39:35 2017
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -81,7 +81,7 @@ D5|||GND||||||||||||
 D6||IOBM|IO_L3P_0|UNUSED||0|||||||||
 D7|||VCCO_0|||0|||||any******||||
 D8||IOBM|IO_L11P_0|UNUSED||0|||||||||
-D9|CLK|IOB|IO_L34P_GCLK19_0|INPUT|LVCMOS25*|0||||NONE||LOCATED|NO|NONE|
+D9||IOBM|IO_L34P_GCLK19_0|UNUSED||0|||||||||
 D10|||GND||||||||||||
 D11||IOBM|IO_L36P_GCLK15_0|UNUSED||0|||||||||
 D12|||NC||||||||||||
@@ -334,7 +334,7 @@ V6||IOBS|IO_L45N_2|UNUSED||2|||||||||
 V7||IOBS|IO_L43N_2|UNUSED||2|||||||||
 V8||IOBS|IO_L41N_VREF_2|UNUSED||2|||||||||
 V9||IOBS|IO_L32N_GCLK28_2|UNUSED||2|||||||||
-V10||IOBS|IO_L30N_GCLK0_USERCCLK_2|UNUSED||2|||||||||
+V10|CLK|IOB|IO_L30N_GCLK0_USERCCLK_2|INPUT|LVCMOS25*|2||||NONE||LOCATED|NO|NONE|
 V11||IOBS|IO_L23N_2|UNUSED||2|||||||||
 V12|||NC||||||||||||
 V13||IOBS|IO_L14N_D12_2|UNUSED||2|||||||||
